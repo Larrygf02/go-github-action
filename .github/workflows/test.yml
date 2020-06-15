@@ -23,14 +23,14 @@ jobs:
     steps:
     # sets up go based on the version
     - name: Install Go
-    uses: actions/setup-go@v2
-    with:
-        go-version: ${{ matrix.go-version }}
+      uses: actions/setup-go@v2
+      with:
+          go-version: ${{ matrix.go-version }}
 
     # checks out our code locally so we can work with the files
     - name: Checkout code
-    uses: actions/checkout@v2
+      uses: actions/checkout@v2
     
     # runs go test ./...
     - name: Test
-    run: go test ./...
+      run: go test ./...
